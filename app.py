@@ -58,8 +58,7 @@ with tab_upload:
             st.dataframe(df.head(10), use_container_width=True)
 
 with tab_paste:
-    txt_area = st.text_area("Tempel teks (satu dokumen per baris)", height=160, placeholder="Dokumen 1...
-Dokumen 2...")
+    txt_area = st.text_area("Tempel teks (satu dokumen per baris)", height=160, placeholder="Dokumen 1... Dokumen 2...")
     if txt_area.strip():
         docs = [line.strip() for line in txt_area.splitlines() if line.strip()]
         doc_ids = [f"doc_{i+1}" for i in range(len(docs))]
